@@ -11,8 +11,7 @@ RSpec.describe "Merchant index" do
   describe "when i visit /merchants" do
     it "lists all of the merchants by name" do
       visit "/merchants"
-      save_and_open_page
-
+      
       expect(page).to have_content("")
     end
   end
