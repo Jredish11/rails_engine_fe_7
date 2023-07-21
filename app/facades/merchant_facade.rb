@@ -7,6 +7,6 @@ class MerchantFacade
 
   def self.merchant_items(merchant_id)
     merchant_data = MerchantService.merchant_items(merchant_id)
-    merchant_data[:data].map { |merchant| Merchant.new(merchant) }
+    merchant_data[:data].map { |merchant|  Merchant.new(merchant) }
   end
 end
