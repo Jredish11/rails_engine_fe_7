@@ -17,11 +17,16 @@ RSpec.describe "Merchant show page" do
 
       visit merchant_path(merchant.id)
     end
-    
-      it "lists all of the items the merchant sells" do
-
-
-      end
+  
+    it "lists all of the items the merchant sells" do
+      save_and_open_page
+      expect(page).to have_content("4")
+      expect(page).to have_content("item")
+      expect(page).to have_content("Item Et Cumque")
+      expect(page).to_not have_content("23")
+      expect(page).to_not have_content("merchant")
+      expect(page).to_not have_content("Burger")
+    end
   end
 end
 
